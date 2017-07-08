@@ -15,9 +15,7 @@
 Acknowledge
 ++++++++++++++++
 
-非常感谢 `熊能 <https://github.com/yidao620c/>`__ 高质量的中译本及公开的 `源文档 <https://github.com/yidao620c/python3-cookbook/>`__.
-
-也非常感谢 `readthedocs <https://readthedocs.org/>`__ 提供的在线文档功能使得我方便的管理笔记.
+非常感谢 `熊能 <https://github.com/yidao620c/>`__ 高质量的中译本及公开的 `源文档 <https://github.com/yidao620c/python3-cookbook/>`__. 也非常感谢 `readthedocs <https://readthedocs.org/>`__ 提供的在线文档功能使得我方便地管理笔记.
 
 
 
