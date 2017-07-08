@@ -2,8 +2,7 @@
 《Python Cookbook》 3rd Edition 阅读笔记
 =========================================================
 
-本文档是对 **《Python Cookbook, 3rd Edition》** 的阅读笔记, 在熊能翻译的 `中文版 <http://python3-cookbook.readthedocs.io>`__ 的基础上修改而成, 非常感谢其为我们带来高质量的中译本并公开源文档.
-
+本文档是对 **《Python Cookbook, 3rd Edition》** 的阅读笔记, 在熊能翻译的 `中文版 <http://python3-cookbook.readthedocs.io>`__ 的基础上修改而成.
 
 * 项目主页: https://github.com/CarlKing5019/python3-cookbook-notes
 
@@ -15,10 +14,10 @@
 ++++++++++++++++
 Acknowledge
 ++++++++++++++++
-1. Xiong Neng (https://github.com/yidao620c/python3-cookbook/)
-2. Tony Yang (liuliu036@gmail.com)
-3. Yu Longjun (https://github.com/yulongjun)
-4. LxMit (https://github.com/LxMit)
+
+非常感谢 `熊能 <https://github.com/yidao620c/>`__ 高质量的中译本及公开的 `源文档 <https://github.com/yidao620c/python3-cookbook/>`__.
+
+也非常感谢 `readthedocs <https://readthedocs.org/>`__ 提供的在线文档功能使得我方便的管理笔记.
 
 
 
