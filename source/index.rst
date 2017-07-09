@@ -31,4 +31,7 @@ Python Cookbook 3rd Edition Notes
 
    chapters/p01*
    chapters/p02*
+   chapters/p03*
+   chapters/p04*
+   chapters/p05*
    roadmap
