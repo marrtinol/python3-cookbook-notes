@@ -65,7 +65,7 @@ Python 中的星号变量可以代表任意长度的列表. 例如:
 
 尾递归版本的累加算法:
 
-.. code-block:: haskel
+.. code-block:: haskell
 
     sum :: (Num a) => [a] -> a -> a
     sum (x:xs) total = sum xs x + total
