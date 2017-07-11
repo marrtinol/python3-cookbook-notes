@@ -57,6 +57,8 @@ release = '2.0.0'
 
 exclude_patterns = []
 
+html_theme = 'default'
+
 html_static_path = ['_static']
 
 # Output file base name for HTML help builder.
@@ -72,7 +74,6 @@ latex_elements={# The paper size ('letterpaper' or 'a4paper').
 'utf8extra':'',#必須
 # Additional stuff for the LaTeX preamble.
 'preamble': r"""
-%\usepackage{xeCJK}
 \usepackage{ctex}
 \usepackage{indentfirst}
 \setlength{\parindent}{2em}
@@ -81,7 +82,7 @@ latex_elements={# The paper size ('letterpaper' or 'a4paper').
 % \setCJKfamilyfont{song}{WenQuanYi Micro Hei}
 % \setCJKfamilyfont{sf}{WenQuanYi Micro Hei}
 \XeTeXlinebreaklocale "zh"
-% \XeTeXlinebreakskip = 0pt plus 1pt
+\XeTeXlinebreakskip = 0pt plus 1pt
 \usepackage{titlesec}
 \newcommand{\sectionbreak}{\clearpage}
 \newcommand\normalsectioning{\setcounter{secnumdepth}{2}}
@@ -133,7 +134,6 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-# html_theme = 'sphinx_rtd_theme'
 
 html_theme_options = {
     'collapse_navigation': False,
