@@ -43,17 +43,17 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'python3-cookbook'
-copyright = u'2015, 熊能'
+project = u'python3-cookbook-notes'
+copyright = u'2017, Carl King'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 #
 # The short X.Y version.
-version = '2.0'
+version = '0.1'
 # The full version, including alpha/beta/rc tags.
-release = '2.0.0'
+release = '0.1.0'
 
 exclude_patterns = []
 
@@ -62,7 +62,7 @@ html_theme = 'default'
 # html_static_path = ['_static']
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'python3-cookbook doc'
+htmlhelp_basename = 'python3-cookbook-notes doc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -82,19 +82,40 @@ latex_elements={# The paper size ('letterpaper' or 'a4paper').
 % \setCJKfamilyfont{song}{WenQuanYi Micro Hei}
 % \setCJKfamilyfont{sf}{WenQuanYi Micro Hei}
 \XeTeXlinebreaklocale "zh"
-\XeTeXlinebreakskip = 0pt plus 1pt
+% \XeTeXlinebreakskip = 0pt plus 1pt
+\renewcommand{\contentsname}{}
+
+% 在 section 前插入分页
 \usepackage{titlesec}
 \newcommand{\sectionbreak}{\clearpage}
-\newcommand\normalsectioning{\setcounter{secnumdepth}{2}}
-\newcommand\specialsectioning{\setcounter{secnumdepth}{-2}}
+
+% 章节编号只编号到 subsection
+\newcommand\normalsecnumdepth{\setcounter{secnumdepth}{2}}
+
+% 所有层次章节都不编号
+\newcommand\specialsecnumdepth{\setcounter{secnumdepth}{-2}}
+
+% toc 到 subsection
+\newcommand\normaltocdepth{
+    \setcounter{tocdepth}{2}
+    \addtocontents{toc}{\setcounter{tocdepth}{2}}
+}
+
+% toc 到 section
+\newcommand\specialtocdepth{
+    \setcounter{tocdepth}{1}
+    \addtocontents{toc}{\setcounter{tocdepth}{1}}
+}
+
+\specialsecnumdepth
 """}
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'python3-cookbook.tex', u'《Python Cookbook》第三版',
-   u'熊能', 'howto'),
+  ('index', 'python3-cookbook.tex', u'《Python Cookbook》第三版笔记',
+   u'Carl King', 'howto'),
 ]
 
 # -- Options for manual page output ---------------------------------------
@@ -102,8 +123,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'python3-cookbook', u'《Python Cookbook》第三版',
-     [u'熊能'], 1)
+    ('index', 'python3-cookbook', u'《Python Cookbook》第三版笔记',
+     [u'Carl King'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -116,8 +137,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'python3-cookbook', u'《Python Cookbook》第三版',
-   u'熊能', 'python3-cookbook', '《Python Cookbook》第三版',
+  ('index', 'python3-cookbook-notes', u'《Python Cookbook》第三版笔记',
+   u'Carl King', 'python3-cookbook-notes', '《Python Cookbook》第三版笔记',
    'Miscellaneous'),
 ]
 
@@ -130,6 +151,8 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
     import sphinx_rtd_theme
     html_theme = 'sphinx_rtd_theme'
     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+else:
+    html_theme = 'sphinx_rtd_theme'
 # otherwise, readthedocs.org uses their theme by default, so no need to specify it
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
